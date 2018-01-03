@@ -8,7 +8,7 @@
  *
  */
 const path = require('path');
-const ExtractTextPlugin = require("extract-text-webpack-plugin");
+// const ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 module.exports = {
   entry: './main.js',
@@ -20,17 +20,17 @@ module.exports = {
     rules: [
       {
         test: /\.css$/,
-        use: ExtractTextPlugin.extract({
-          fallback: "style-loader",
-          use: "css-loader"
-        })
-        // use: ['style-loader', 'css-loader?minimize'],
+        // use: ExtractTextPlugin.extract({
+        //   fallback: "style-loader",
+        //   use: "css-loader"
+        // })
+        use: ['style-loader', 'css-loader?minimize'],
       }
     ]
   },
-  plugins: [
-    new ExtractTextPlugin({
-      filename: `[name]_[contenthash:8].css`
-    })
-  ]
+  // plugins: [
+  //   new ExtractTextPlugin({
+  //     filename: `[name]_[contenthash:8].css`
+  //   })
+  // ]
 };
