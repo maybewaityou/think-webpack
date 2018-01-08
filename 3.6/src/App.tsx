@@ -10,7 +10,11 @@ import * as React from 'react';
 export default class extends React.Component {
 
   public render() {
-    return <h1>Hello, Webpack</h1>
+    return (
+      <h1>
+        Hello, Webpack ~ ~
+      </h1>
+    );
   }
 
 }
