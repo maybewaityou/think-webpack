@@ -4,10 +4,14 @@ module.exports = {
   entry: './main',
   output: {
     filename: 'bundle.js',
-    path: path.resolve(__dirname, './dist'),
+    path: path.resolve(__dirname, './dist')
   },
+  devtool: 'source-map',
   resolve: {
-    extensions: ['.ts', '.tsx', '.js'],
+    alias:{
+      'react$': '/path/to/react.min.js'
+    },
+    extensions: ['.ts', '.tsx', '.js']
   },
   module: {
     rules: [
@@ -16,6 +20,5 @@ module.exports = {
         loader: 'awesome-typescript-loader'
       }
     ]
-  },
-  devtool: 'source-map',
+  }
 };
