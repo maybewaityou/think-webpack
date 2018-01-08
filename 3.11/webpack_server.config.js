@@ -1,5 +1,5 @@
 const path = require('path');
-const nodeExternals = require('webpack_node_externals');
+const nodeExternals = require('webpack-node-externals');
 
 module.exports = {
   entry: './index',
@@ -9,6 +9,9 @@ module.exports = {
     libraryTarget: 'commonjs2',
     filename: 'bundle_server.js',
     path: path.resolve(__dirname, './dist')
+  },
+  resolve: {
+    extensions: ['.js', '.jsx']
   },
   module: {
     rules: [
