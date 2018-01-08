@@ -1,7 +1,7 @@
 const path = require('path');
 
 module.exports = {
-  entry: './main',
+  entry: './src/index',
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, './dist')
@@ -9,7 +9,7 @@ module.exports = {
   devtool: 'source-map',
   resolve: {
     alias:{
-      'react$': '/path/to/react.min.js'
+      '@': path.resolve(__dirname, './src')
     },
     extensions: ['.ts', '.tsx', '.js']
   },

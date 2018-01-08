@@ -2,18 +2,15 @@
  * Created by MeePwn
  * https://github.com/maybewaityou
  *
- * @flow
- *
  * description:
  *
  */
 import * as React from 'react';
-import { render } from 'react-dom';
 
-class Title extends React.Component {
-  render() {
+export default class extends React.Component {
+
+  public render() {
     return <h1>Hello, Webpack</h1>
   }
-}
 
-render(<Title />, window.document.getElementById('app'));
+}
